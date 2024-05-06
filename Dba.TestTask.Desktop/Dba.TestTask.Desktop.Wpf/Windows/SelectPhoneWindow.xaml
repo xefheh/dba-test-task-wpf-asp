@@ -1,0 +1,72 @@
+<Window x:Class="Dba.TestTask.Desktop.Wpf.Windows.SelectPhoneWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Dba.TestTask.Desktop.Wpf.Windows"
+        mc:Ignorable="d"
+        Title="SelectPhoneWindow" Height="250" Width="800"
+        AllowsTransparency="True"
+        FontFamily="Helvetica"
+        FontSize="16px"
+        WindowStyle="None"
+        Background="Transparent"
+        MouseDown="SelectPhoneWindow_OnMouseDown"
+        Loaded="SelectPhoneWindow_OnLoaded">
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Templates/ButtonTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Border Width="800"
+            Height="250"
+            Background="White"
+            BorderBrush="LightGray"
+            BorderThickness="2"
+            CornerRadius="15">
+    <Grid Margin="20 0 20 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0" Text="Фильтрация по телефону" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"></TextBlock>
+
+        <TextBlock Grid.Row="1">Номер телефона:</TextBlock>
+        
+        <TextBox Grid.Row="2" Name="PhoneNumberTextBox" Height="30" BorderThickness="0 0 0 1" />
+        
+        <Grid Grid.Row="5" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <Button Template="{StaticResource DefaultBlueButtonTemplate}"
+                    Width="200"
+                    Height="50"
+                    Content="ОК"
+                    Foreground="White"
+                    FontWeight="Bold" 
+                    Click="Ok_Click"/>
+            <Button Grid.Column="2" Template="{StaticResource DefaultBlueButtonTemplate}"
+                    Width="200"
+                    Height="50"
+                    Content="Отмена"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    Click="Cancel_Click"/>
+        </Grid>
+    </Grid>
+    </Border>
+</Window>

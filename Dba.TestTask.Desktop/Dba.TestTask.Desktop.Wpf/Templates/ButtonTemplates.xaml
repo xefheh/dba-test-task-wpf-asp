@@ -1,0 +1,103 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ControlTemplate x:Key="ExitButtonTemplate" TargetType="Button">
+        <Grid>
+            <Border x:Name="ButtonBorder"
+                    Background="Red"
+                    BorderThickness="0"
+                    Height="{TemplateBinding Height}"
+                    Width="{TemplateBinding Width}"
+                    CornerRadius="15">
+                <ContentPresenter
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
+            </Border>
+        </Grid>
+                        
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="ButtonBorder" Property="Background" Value="DarkRed"></Setter>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="ButtonBorder" Property="Background" Value="DarkRed"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    
+    <ControlTemplate x:Key="MinimizeButtonTemplate" TargetType="Button">
+        <Grid>
+            <Border x:Name="ButtonBorder"
+                    Background="Orange"
+                    BorderThickness="0"
+                    Height="{TemplateBinding Height}"
+                    Width="{TemplateBinding Width}"
+                    CornerRadius="15">
+                <ContentPresenter
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
+            </Border>
+        </Grid>
+                        
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="ButtonBorder" Property="Background" Value="DarkOrange"></Setter>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="ButtonBorder" Property="Background" Value="DarkOrange"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    
+    <ControlTemplate x:Key="DefaultBlueButtonTemplate" TargetType="Button">
+        <Grid>
+            <Border x:Name="ButtonBorder"
+                    Background="DodgerBlue"
+                    Height="{TemplateBinding Height}"
+                    Width="{TemplateBinding Width}"
+                    CornerRadius="15">
+                
+                <ContentPresenter
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+            </Border>
+        </Grid>
+                        
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="ButtonBorder" Property="Background" Value="#176CBF"></Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="ButtonBorder" Property="Background" Value="LightSlateGray"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    
+    <ControlTemplate x:Key="DefaultGreenButtonTemplate" TargetType="Button">
+        <Grid>
+            <Border x:Name="ButtonBorder"
+                    Background="LimeGreen"
+                    Height="{TemplateBinding Height}"
+                    Width="{TemplateBinding Width}"
+                    CornerRadius="15">
+                
+                <ContentPresenter
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+            </Border>
+        </Grid>
+                        
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="ButtonBorder" Property="Background" Value="DarkGreen"></Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="ButtonBorder" Property="Background" Value="LightSlateGray"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    
+</ResourceDictionary>
