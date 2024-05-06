@@ -20,7 +20,7 @@ var serviceProvider = builder.Services.BuildServiceProvider();
 
 var factory = serviceProvider.GetService<IDbConnectionFactory>();
 DbInitializer.InitializeDb(factory!.CreateConnection());
-//DbInitializer.CreateTestRows(factory!.CreateConnection());
+DbInitializer.CreateTestRows(factory!.CreateConnection());
 
 var app = builder.Build();
 
